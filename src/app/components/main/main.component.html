@@ -1,1 +1,18 @@
-<p>main works!</p>
+<div>
+  <h4>{{ title }}</h4>
+</div>
+
+<div ngbAccordion>
+  <div ngbAccordionItem *ngFor="let item of items; let i = index" [collapsed]="i !== 0">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>{{ item.title }}</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          {{ item.description }}
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

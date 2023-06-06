@@ -22,4 +22,22 @@
   </div>
 </header>
 
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer bg-light">
+  <div class="container-fluid p-3 p-md-5">
+    <div>
+      Для оформления выбрана библиотека
+      <a href="https://ng-bootstrap.github.io/#/home" rel="noopener" target="_blank">
+        Ng-Bootstrap
+      </a>
+    </div>
+    <div>
+      Автор:
+      <b>Ivan T</b>
+      © {{ getYearPeriod }}
+    </div>
+  </div>
+</footer>
