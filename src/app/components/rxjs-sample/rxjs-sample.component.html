@@ -1,1 +1,28 @@
-<p>rxjs-sample works!</p>
+<h3>RXJS</h3>
+
+<div>Пример использования map для преобразования массива чисел в массив строк:</div>
+<ul>
+  <li *ngFor="let num of nums$ | async">{{ num }}</li>
+</ul>
+
+<div>
+  Пример использования filter для фильтрации массива чисел, чтобы оставить только те, которые больше
+  3:
+</div>
+<ul>
+  <li *ngFor="let num of filter$ | async">{{ num }}</li>
+</ul>
+
+<div>Пример использования mergeMap для объединения двух Observable в один:</div>
+
+<ul>
+  <li *ngFor="let num of mergeMap$ | async">{{ num }}</li>
+</ul>
+
+<div>
+  Пример использования switchMap для замены Observable на новый Observable, когда предыдущий
+  Observable завершен:
+</div>
+<ul>
+  <li *ngFor="let item of switchMap$ | async">{{ item }}</li>
+</ul>

@@ -1,1 +1,30 @@
-<p>ts-gen-sample works!</p>
+<h3>TypeScript Generic</h3>
+
+<div>
+  <div>
+    <a href="https://habr.com/ru/companies/tinkoff/articles/588655/" target="_blank">
+      Статья про Дженерики (тинькофф)
+    </a>
+  </div>
+  <div><a href="https://habr.com/ru/articles/455473/" target="_blank">Статья про Дженерики</a></div>
+</div>
+
+<form class="form">
+  <div class="form-group">
+    <h1>Users</h1>
+    <ul>
+      <li *ngFor="let user of users">{{ user.name }} - {{ user.email }}</li>
+    </ul>
+    <button (click)="addUser()" class="btn btn-primary">Add User</button>
+  </div>
+</form>
+
+<form class="form">
+  <div class="form-group">
+    <button (click)="getCar()" class="btn btn-primary btn-gen">get Car</button>
+    <button (click)="getVespa()" class="btn btn-primary btn-gen">get Vespa</button>
+    <button (click)="getTruck()" class="btn btn-primary btn-gen">get Truck</button>
+  </div>
+</form>
+
+<div>{{ car | json }}</div>

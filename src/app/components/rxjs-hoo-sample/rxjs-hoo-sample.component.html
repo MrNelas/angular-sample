@@ -1,1 +1,15 @@
-<p>rxjs-hoo-sample works!</p>
+<h3>RxJS Higher Order Observables</h3>
+
+<div><a href="https://aalexeev239.github.io/rxjs-hoo/" target="_blank">Статья по RXJX HOO</a></div>
+
+<h4>MergeMap</h4>
+<div>Данные нельзя потерять, порядок не важен</div>
+<h4>ConcatMap</h4>
+<div>Данные нельзя потерять, порядок важен</div>
+<h4>SwitchMap</h4>
+<div>
+  Устаревшие данные потеряются. Удобен из-за автоотписки. Опасен из-за автоотписки (например, create
+  / update / delete операции)
+</div>
+<h4>ExhaustMap</h4>
+<div>Надо игнорировать внешний поток до наступления какого-то события (например, авторизации)</div>
