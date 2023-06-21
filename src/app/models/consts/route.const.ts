@@ -24,15 +24,15 @@ export const ROUTES_APP: MenuItem[] = [
     title: RouteTitleEnum.zone,
   },
   {
-    link: RouteEnum.tsUtils,
-    title: RouteTitleEnum.tsUtils,
-  },
-  {
     link: RouteEnum.tsGen,
     title: RouteTitleEnum.tsGen,
   },
-  {
-    link: RouteEnum.javascript,
-    title: RouteTitleEnum.javascript,
-  },
+  // {
+  //   link: RouteEnum.tsUtils,
+  //   title: RouteTitleEnum.tsUtils,
+  // },
+  // {
+  //   link: RouteEnum.javascript,
+  //   title: RouteTitleEnum.javascript,
+  // },
 ];
