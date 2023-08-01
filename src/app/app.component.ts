@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { ROUTES_APP } from './models/consts/route.const';
 
@@ -7,6 +7,7 @@ import { ROUTES_APP } from './models/consts/route.const';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   /** Заголовок страницы */

@@ -15,8 +15,28 @@
   </a>
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav flex-row">
-      <li class="nav-item" *ngFor="let item of menuItems">
-        <a class="nav-link" href="/" [routerLink]="item.link ? item.link : '/'">{{ item.title }}</a>
+      <li ngbDropdown class="nav-item" role="presentation" *ngFor="let item of menuItems">
+        <ng-container *ngIf="item.main; else another">
+          <button type="button" class="nav-link" [routerLink]="item.link ? item.link : '/'">
+            {{ item.title }}
+          </button>
+        </ng-container>
+
+        <ng-template #another>
+          <button type="button" class="nav-link" ngbDropdownToggle>
+            {{ item.title }}
+          </button>
+        </ng-template>
+
+        <div ngbDropdownMenu *ngIf="item.subItems">
+          <button
+            ngbDropdownItem
+            *ngFor="let subItems of item.subItems"
+            [routerLink]="subItems.link ? subItems.link : '/'"
+          >
+            {{ subItems.title }}
+          </button>
+        </div>
       </li>
     </ul>
   </div>

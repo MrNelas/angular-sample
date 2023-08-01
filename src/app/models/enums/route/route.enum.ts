@@ -1,3 +1,4 @@
+/** Маршруты */
 export enum RouteEnum {
   main = '',
   forms = 'forms',
