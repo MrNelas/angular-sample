@@ -1,5 +1,5 @@
 import { Observable, of } from 'rxjs';
-import { delay, filter, map, mergeMap, switchMap, tap, toArray } from 'rxjs/operators';
+import { delay, filter, mergeMap, switchMap, toArray } from 'rxjs/operators';
 
 import { Component } from '@angular/core';
 

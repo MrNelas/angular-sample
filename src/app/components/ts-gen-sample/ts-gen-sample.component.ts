@@ -7,28 +7,6 @@ interface User {
   email: string;
 }
 
-/** Админ */
-interface Admin extends User {
-  role: string;
-}
-
-type CurrencySign = '₽' | '€' | '£';
-
-const currencySigns: ReadonlyArray<CurrencySign> = ['₽', '€', '£'];
-
-type PaymentInfo<T> = {
-  // T — параметр дженерика
-  id: string;
-  amount: number;
-  currency: T; // «настраиваем» тип поля currency
-};
-
-interface PaymentInfoInter<T> {
-  id: string;
-  amount: number;
-  currency: T;
-}
-
 @Component({
   selector: 'app-ts-gen-sample',
   templateUrl: './ts-gen-sample.component.html',
@@ -77,8 +55,8 @@ export class TsGenSampleComponent {
 }
 
 class Car {
-  label: string = 'Generic Car';
-  numWheels: Number = 4;
+  label = 'Generic Car';
+  numWheels = 4;
   horn() {
     return 'beep beep!';
   }

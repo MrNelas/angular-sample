@@ -46,8 +46,6 @@ export class MainComponent {
     },
     { title: 'JavaScript', description: 'Различные примеры использования JavaScript' },
   ];
-
-  constructor() {}
 }
 
 /** Тип элементов меню */
