@@ -7,35 +7,21 @@ export const ROUTES_APP: MenuItem[] = [
   {
     link: RouteEnum.main,
     title: RouteTitleEnum.main,
-    main: true,
   },
   {
     link: RouteEnum.javascript,
     title: RouteTitleEnum.javascript,
-    main: true,
   },
   {
+    link: RouteEnum.angular,
     title: RouteTitleEnum.angular,
-    main: false,
-    subItems: [
-      { link: RouteEnum.forms, title: RouteTitleEnum.forms },
-      { link: RouteEnum.zone, title: RouteTitleEnum.zone },
-    ],
   },
   {
+    link: RouteEnum.rxjs,
     title: RouteTitleEnum.rxjs,
-    main: false,
-    subItems: [
-      { link: RouteEnum.rxjs, title: RouteTitleEnum.rxjs },
-      { link: RouteEnum.rxjsHoo, title: RouteTitleEnum.rxjsHoo },
-    ],
   },
   {
+    link: RouteEnum.typescript,
     title: RouteTitleEnum.typescript,
-    main: false,
-    subItems: [
-      { link: RouteEnum.tsGen, title: RouteTitleEnum.tsGen },
-      { link: RouteEnum.tsUtils, title: RouteTitleEnum.tsUtils },
-    ],
   },
 ];

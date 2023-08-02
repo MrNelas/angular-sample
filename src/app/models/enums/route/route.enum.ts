@@ -1,11 +1,8 @@
 /** Маршруты */
 export enum RouteEnum {
   main = '',
-  forms = 'forms',
   javascript = 'javascript',
+  angular = 'angular',
   rxjs = 'rxjs',
-  rxjsHoo = 'rxjs-hoo',
-  tsUtils = 'ts-utils',
-  tsGen = 'ts-gen',
-  zone = 'zone',
+  typescript = 'typescript',
 }

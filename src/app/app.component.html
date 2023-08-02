@@ -16,13 +16,13 @@
   <div class="navbar-nav-scroll">
     <ul class="navbar-nav flex-row">
       <li ngbDropdown class="nav-item" role="presentation" *ngFor="let item of menuItems">
-        <ng-container *ngIf="item.main; else another">
+        <ng-container>
           <button type="button" class="nav-link" [routerLink]="item.link ? item.link : '/'">
             {{ item.title }}
           </button>
         </ng-container>
 
-        <ng-template #another>
+        <!-- <ng-template #another>
           <button type="button" class="nav-link" ngbDropdownToggle>
             {{ item.title }}
           </button>
@@ -36,7 +36,7 @@
           >
             {{ subItems.title }}
           </button>
-        </div>
+        </div> -->
       </li>
     </ul>
   </div>

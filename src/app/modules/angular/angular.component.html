@@ -1,0 +1,19 @@
+<div class="d-flex" id="wrapper">
+  <div class="bg-light border-right" id="sidebar-wrapper" [ngClass]="false ? 'hide' : 'show'">
+    <div class="sidebar-heading">Angular</div>
+    <div class="list-group list-group-flush">
+      <ng-container *ngFor="let item of menuItems">
+        <a
+          href="/"
+          class="list-group-item list-group-item-action bg-light"
+          [routerLink]="item.link"
+        >
+          {{ item.title }}
+        </a>
+      </ng-container>
+    </div>
+  </div>
+  <div id="page-content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>

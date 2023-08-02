@@ -2,7 +2,7 @@
 export type MenuItem = {
   link?: string;
   title: string;
-  main: boolean;
+  main?: boolean;
   subItems?: SubItems[];
 };
 

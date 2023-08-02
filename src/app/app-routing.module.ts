@@ -1,55 +1,34 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FormsSampleComponent } from './components/forms-sample/forms-sample.component';
-import { JavascriptSampleComponent } from './components/javascript-sample/javascript-sample.component';
 import { MainComponent } from './components/main/main.component';
-import { RxjsHooSampleComponent } from './components/rxjs-hoo-sample/rxjs-hoo-sample.component';
-import { RxjsSampleComponent } from './components/rxjs-sample/rxjs-sample.component';
-import { TsGenSampleComponent } from './components/ts-gen-sample/ts-gen-sample.component';
-import { TsUtilsSampleComponent } from './components/ts-utils-sample/ts-utils-sample.component';
-import { ZoneSampleComponent } from './components/zone-sample/zone-sample.component';
+import { RouteEnum } from './models/enums/route/route.enum';
 
+/** Маршрутизация главного модуля */
 const routes: Routes = [
   {
     path: '',
     canActivate: [],
     component: MainComponent,
   },
+
   {
-    path: 'javascript',
-    canActivate: [],
-    component: JavascriptSampleComponent,
+    path: RouteEnum.angular,
+    loadChildren: () => import('./modules/angular/angular.module').then((m) => m.AngularModule),
   },
   {
-    path: 'forms',
-    canActivate: [],
-    component: FormsSampleComponent,
+    path: RouteEnum.rxjs,
+    loadChildren: () => import('./modules/rxjs/rxjs.module').then((m) => m.RxjsModule),
   },
   {
-    path: 'rxjs',
-    canActivate: [],
-    component: RxjsSampleComponent,
+    path: RouteEnum.typescript,
+    loadChildren: () =>
+      import('./modules/typescript/typescript.module').then((m) => m.TypescriptModule),
   },
   {
-    path: 'rxjs-hoo',
-    canActivate: [],
-    component: RxjsHooSampleComponent,
-  },
-  {
-    path: 'zone',
-    canActivate: [],
-    component: ZoneSampleComponent,
-  },
-  {
-    path: 'ts-utils',
-    canActivate: [],
-    component: TsUtilsSampleComponent,
-  },
-  {
-    path: 'ts-gen',
-    canActivate: [],
-    component: TsGenSampleComponent,
+    path: RouteEnum.javascript,
+    loadChildren: () =>
+      import('./modules/javascript/javascript.module').then((m) => m.JavascriptModule),
   },
 ];
 
