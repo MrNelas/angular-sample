@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { SideBarModule } from '../shared/side-bar/side-bar.module';
 import { AngularRoutingModule } from './angular-routing.module';
 import { AngularComponent } from './angular.component';
 import { ChangeDetectionComponent } from './components/change-detection/change-detection.component';
@@ -15,6 +16,6 @@ import { ZoneSampleComponent } from './components/zone-sample/zone-sample.compon
     ZoneSampleComponent,
     ChangeDetectionComponent,
   ],
-  imports: [CommonModule, AngularRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, AngularRoutingModule, FormsModule, ReactiveFormsModule, SideBarModule],
 })
 export class AngularModule {}

@@ -8,6 +8,9 @@ import { ROUTES_ANGULAR } from './models/consts/route.const';
   styleUrls: ['./angular.component.scss'],
 })
 export class AngularComponent {
+  /** Заголовок */
+  public readonly title: string = 'Angular';
+
   /** Пункты меню */
   public readonly menuItems = ROUTES_ANGULAR;
 }

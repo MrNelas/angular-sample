@@ -1,0 +1,10 @@
+<div class="sidebar" [ngClass]="items.length ? 'show' : 'hide'">
+  <div class="sidebar__heading">{{ title }}</div>
+  <div class="sidebar__list">
+    <ng-container *ngFor="let item of items">
+      <a href="/" class="sidebar__list__item" [routerLink]="item.link">
+        {{ item.title }}
+      </a>
+    </ng-container>
+  </div>
+</div>
