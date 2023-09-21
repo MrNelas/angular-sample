@@ -1,0 +1,21 @@
+.content {
+    &__header {
+        p::first-letter {
+            initial-letter: 1.2 1;
+        }
+    }
+    &__form {
+        width: 200px;
+        .form-group {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    &__result {
+        margin:  10px 10px 10px 0;
+        padding: 10px;
+        background-color: lightgray;
+        width: 500px;
+        border-radius: 10px;
+    }
+}

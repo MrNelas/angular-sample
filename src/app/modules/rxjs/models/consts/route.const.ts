@@ -7,4 +7,5 @@ import { RouteRxjsEnum } from '../enums/route.enum';
 export const ROUTES_RXJS: MenuItem[] = [
   { link: RouteRxjsEnum.rxjs, title: RouteRxjsTitleEnum.rxjs },
   { link: RouteRxjsEnum.rxjsHoo, title: RouteRxjsTitleEnum.rxjsHoo },
+  { link: RouteRxjsEnum.rxjsHot, title: RouteRxjsTitleEnum.rxjsHot },
 ];

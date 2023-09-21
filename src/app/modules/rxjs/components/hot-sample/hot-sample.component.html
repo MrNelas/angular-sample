@@ -1,0 +1,31 @@
+<div class="content">
+  <div class="content__header">
+    <p>
+      Hot Observable — это поток, источник данных которого создается снаружи конструктора
+      Observable. Попробуем отобразить это в коде. В качестве источника данных может выступать что
+      угодно.
+    </p>
+  </div>
+
+  <div class="content__form">
+    <form (ngSubmit)="onSubmit(model.value)" class="form">
+      <div class="form-group">
+        <label for="name">Число:</label>
+        <input
+          type="number"
+          id="name"
+          name="name"
+          [(ngModel)]="model.value"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+  </div>
+
+  <div class="content__result">
+    <code>{{ subject$ | async | json }}</code>
+  </div>
+</div>

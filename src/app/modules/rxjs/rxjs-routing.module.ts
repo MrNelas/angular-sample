@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HotSampleComponent } from './components/hot-sample/hot-sample.component';
 import { RxjsHooSampleComponent } from './components/rxjs-hoo-sample/rxjs-hoo-sample.component';
 import { RxjsSampleComponent } from './components/rxjs-sample/rxjs-sample.component';
 import { RxjsComponent } from './rxjs.component';
@@ -20,6 +21,11 @@ const routes: Routes = [
         path: 'rxjs-hoo',
         canActivate: [],
         component: RxjsHooSampleComponent,
+      },
+      {
+        path: 'rxjs-hot',
+        canActivate: [],
+        component: HotSampleComponent,
       },
     ],
   },
